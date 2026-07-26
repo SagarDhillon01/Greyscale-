@@ -1,1 +1,1 @@
-web: python src/grayscale_converter.py
+web: gunicorn src.grayscale_converter:app --bind 0.0.0.0:$PORT

@@ -40,7 +40,7 @@ def get_available_port(start_port: int) -> int:
                 port += 1
 
 
-def build_simple_web_app() -> None:
+def create_app():
     from flask import Flask, request, send_file
 
     app = Flask(__name__)
@@ -75,6 +75,13 @@ def build_simple_web_app() -> None:
         </form>
         """
 
+    return app
+
+
+app = create_app()
+
+
+def main() -> None:
     requested_port = int(os.environ.get("PORT", 5000))
     port = get_available_port(requested_port)
     if port != requested_port:
@@ -84,4 +91,4 @@ def build_simple_web_app() -> None:
 
 
 if __name__ == "__main__":
-    build_simple_web_app()
+    main()
