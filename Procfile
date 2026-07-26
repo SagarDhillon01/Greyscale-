@@ -1,0 +1,1 @@
+web: python src/grayscale_converter.py
