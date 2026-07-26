@@ -1,56 +1,22 @@
 # Grayscale Image Converter
 
-This project provides a very simple Python app that converts a colored image into a grayscale image using OpenCV.
+A simple Python web app that converts uploaded color images into grayscale using OpenCV.
 
-## Overview
+## Features
 
-The app can be used in two ways:
+- Upload an image through a browser
+- Convert it to grayscale instantly
+- Download the processed image
+- Deployable to Render, Heroku, or similar platforms
 
-- As a Python function to convert image files on disk
-- As a small web app where you upload an image and download the grayscale version
+## Project Structure
+
+- src/grayscale_converter.py: main conversion logic and Flask web app
+- tests/test_grayscale.py: basic tests for grayscale conversion
 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/opencv-grayscale-project.git
-cd opencv-grayscale-project
+git clone https://github.com/SagarDhillon01/Greyscale-.git
+cd Greyscale-
 pip install -r requirements.txt
-```
-
-## Usage
-
-### Python example
-
-```python
-from src.grayscale_converter import convert_to_grayscale
-
-convert_to_grayscale("path/to/colored_image.jpg", "path/to/output_image.jpg")
-```
-
-### Web app example
-
-```bash
-python src/grayscale_converter.py
-```
-
-Then open your browser at http://localhost:5000 and upload an image.
-
-## Running Tests
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-## GitHub and deployment
-
-1. Push this repository to GitHub.
-2. Connect it to a hosting service such as Render, Heroku, or Railway.
-3. Use the existing Procfile so the app starts with:
-
-```bash
-python src/grayscale_converter.py
-```
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
